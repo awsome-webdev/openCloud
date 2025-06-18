@@ -1,0 +1,18 @@
+#folder-parent {
+    position: absolute;
+    display: grid;
+    border: none;
+    top: 30vh;
+    left: 0px;
+    width: 100vw;
+    height: 70vh;
+    overflow: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(20, 1fr);
+}
+.folder {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
