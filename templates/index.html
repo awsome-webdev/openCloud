@@ -4,11 +4,17 @@
         <title>File Server</title>
     </head>
     <body>
-        <div id="folder-parent">
-            <div class="folder" onclick="displayFiles()">
-                <h1>Folder Name</h1><label><a href="" onclick="">Expand</a></label>
-            </div>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="file-input" name="file">
+            <button type="submit">Upload</button>
+        </form>
+        <div id="download-parent">
+            <button id="download" type="submit" onclick="downloadPath()">Download</button>
         </div>
+        <div id="folder-parent">
+            <!-- File/folder tree will be rendered here -->
+        </div>
+        <div id="download-link" style="display:none;"></div>
     </body>
 </html>
 <script src="{{url_for('static', filename='script.js')}}"></script>

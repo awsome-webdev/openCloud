@@ -1,18 +1,144 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6fb;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #2d3a4b;
+    margin-top: 30px;
+}
+
+#upload-form {
+    position: absolute;
+    left: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto 30px auto;
+    padding: 15px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    max-width: 400px;
+}
+
+#upload-form input[type="file"] {
+    font-size: 1em;
+}
+
+#upload-form button {
+    background: #2d7ff9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#upload-form button:hover {
+    background: #1a5fc2;
+}
+button {
+    background: #2d7ff9;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
 #folder-parent {
     position: absolute;
     display: grid;
     border: none;
-    top: 30vh;
-    left: 0px;
+    top: 16vh;
+    left: 3vw;
     width: 100vw;
     height: 70vh;
     overflow: auto;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(20, 1fr);
+    background: #fff;
+    margin: 0 auto 40px auto;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    max-width: 600px;
+    min-height: 200px;
 }
+
 .folder {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 5px;
     border-radius: 5px;
+    font-weight: 600;
+    color: #1a5fc2;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+li {
+    margin: 8px 0;
+    font-size: 1.08em;
+    color: #2d3a4b;
+    display: flex;
+    align-items: center;
+}
+
+li button {
+    margin-left: 12px;
+    background: #e3e9f7;
+    color: #2d7ff9;
+    border: none;
+    border-radius: 4px;
+    padding: 3px 10px;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+li button:hover {
+    background: #d0dbf7;
+}
+button:hover {
+    background: #1a5fc2;
+    color: #fff;
+}
+#download {
+    transition: background 0.2s;
+}
+#download-parent {
+    position: absolute;
+    left: 37.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto 30px auto;
+    padding: 15px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    max-width: 400px;
+}
+@media (max-width: 700px) {
+    #folder-parent {
+        padding: 15px 5vw;
+        max-width: 98vw;
+    }
+    #upload-form {
+        max-width: 98vw;
+        flex-direction: column;
+        gap: 8px;
+    }
 }
