@@ -4,6 +4,12 @@ from werkzeug.utils import secure_filename
 import io
 import zipfile
 from functools import wraps
+import logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='[%(asctime)s] %(levelname)s in %(module)s: %(message)s',
+    filename='app.log',  # Log to a file
+)
 with open(f'{os.getcwd()}/users.txt', 'r') as f:
     file = f.read()
     print(file)
@@ -14,7 +20,10 @@ for line in file.splitlines():
     USERS[username] = password
 
 app = Flask(__name__)
-app.secret_key = 'rythehi'  # Set a strong secret key!
+with open('secret_key.txt', 'r') as key_file:
+    secret_key = key_file.read().splitlines()[0]
+    print(secret_key)
+app.secret_key = secret_key  # Set a strong secret key!
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'root')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -59,6 +68,8 @@ def tree():
 @app.route('/upload', methods=['POST'])
 @login_required
 def upload():
+    client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    logging.info(f"File upload attempt from IP: {client_ip} as {session['user']}")
     rel_path = request.args.get('path', '').strip('/')
     upload_dir = os.path.join(app.config['UPLOAD_FOLDER'], rel_path) if rel_path else app.config['UPLOAD_FOLDER']
     if not os.path.exists(upload_dir):
@@ -75,6 +86,8 @@ def upload():
 @app.route('/download')
 @login_required
 def download():
+    client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    logging.info(f"File download attempt from IP: {client_ip} as {session['user']}")
     rel_path = request.args.get('path', '').strip('/')
     if not rel_path:
         return 'No file specified', 400
@@ -102,13 +115,17 @@ def download():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    user_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    logging.info(f"Login attempt from IP: {user_ip} as {request.form.get('username')}")
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
         if username in USERS and USERS[username] == password:
             session['user'] = username
+            logging.info(f"User logged in: {username} from IP: {user_ip}")
             return redirect(url_for('app_home'))
         else:
+            logging.warning(f"Failed login attempt for user: {username} from IP: {user_ip}")
             return render_template('login.html', error='Invalid credentials')
     return render_template('login.html')
 
