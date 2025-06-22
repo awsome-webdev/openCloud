@@ -15,6 +15,13 @@ function createExplorerElement(tree, path = "") {
         if (value === null) {
             // File
             li.innerHTML = `📄 ${key}`;
+            if (fullPath != key) {
+                li.setAttribute('onclick', `open_file('${fullPath}')`);
+            }
+            else {
+                li.setAttribute('onclick', `open_file('${fullPath}')`);
+            }
+            li.style.cursor = "pointer";
         } else {
             // Folder
             li.innerHTML = `<span class="folder-link" style="cursor:pointer;color:#2d7ff9;">📁 ${key}</span>`;
@@ -27,6 +34,35 @@ function createExplorerElement(tree, path = "") {
         container.appendChild(li);
     }
     return container;
+}
+async function open_file(path) {
+    const file = await fetch(`/file?path=${path}`);
+    console.log(file)
+    const pre = document.getElementById('pre-parent')
+    pre.innerHTML = "Loading...";
+    pre.innerHTML = "";
+    if (file.ok) {
+        const contentType = file.headers.get("Content-Type");
+        if (contentType.startsWith("image/")) {
+            const blob = await file.blob();
+            const url = URL.createObjectURL(blob);
+            pre.innerHTML = `<img src="${url}" style="max-width:100%;max-height:60vh;">`;
+        } else if (contentType.startsWith("video/")) {
+            const blob = await file.blob();
+            const url = URL.createObjectURL(blob);
+            pre.innerHTML = `<video controls style="max-width:100%;max-height:60vh;"><source src="${url}" type="${contentType}"></video>`;
+        } else if (contentType.startsWith("audio/")) {
+            const blob = await file.blob();
+            const url = URL.createObjectURL(blob);
+            pre.innerHTML = `<audio controls><source src="${url}" type="${contentType}"></audio>`;
+    } else if (contentType.startsWith("text/") || contentType === "application/json") {
+        const text = await file.text();
+        pre.innerHTML = `<pre style="white-space:pre-wrap;word-break:break-all;">${text}</pre>`;
+    } else {
+        // For other types, offer download
+        pre.innerHTML = `<a href="/file?path=${encodeURIComponent(path)}" download>Download file</a>`;
+    }
+    }
 }
 function displayFiles() {
     const parent = document.getElementById("folder-parent");

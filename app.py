@@ -5,6 +5,13 @@ import io
 import zipfile
 from functools import wraps
 import logging
+import threading
+def update_users():
+    global USERS
+    USERS = {}
+    for line in file.splitlines():
+        username, password = line.split(':')
+        USERS[username] = password
 logging.basicConfig(
     level=logging.INFO,
     format='[%(asctime)s] %(levelname)s in %(module)s: %(message)s',
@@ -18,7 +25,8 @@ USERS = {}
 for line in file.splitlines():
     username, password = line.split(':')
     USERS[username] = password
-
+timer = threading.Timer(60, update_users)
+timer.start()
 app = Flask(__name__)
 with open('secret_key.txt', 'r') as key_file:
     secret_key = key_file.read().splitlines()[0]
@@ -64,7 +72,17 @@ def tree():
     if not os.path.commonpath([os.path.abspath(abs_path), app.config['UPLOAD_FOLDER']]) == app.config['UPLOAD_FOLDER']:
         return jsonify({})  # Prevent directory traversal
     return jsonify(scan_dir(abs_path))
-
+@app.route('/file')
+@login_required
+def file():
+    rel_path = request.args.get('path', '').strip('/')
+    abs_path = os.path.join(app.config['UPLOAD_FOLDER'], rel_path)
+    # Directory traversal protection
+    if not os.path.commonpath([os.path.abspath(abs_path), app.config['UPLOAD_FOLDER']]) == app.config['UPLOAD_FOLDER']:
+        return 'Invalid path', 400
+    if not os.path.isfile(abs_path):
+        return 'File not found', 404
+    return send_file(abs_path)
 @app.route('/upload', methods=['POST'])
 @login_required
 def upload():

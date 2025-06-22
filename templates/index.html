@@ -4,15 +4,21 @@
         <title>File Server</title>
     </head>
     <body>
-        <form id="upload-form" enctype="multipart/form-data">
-            <input type="file" id="file-input" name="file">
-            <button type="submit">Upload</button>
-        </form>
-        <div id="download-parent">
-            <button id="download" type="submit" onclick="downloadPath()">Download</button>
-        </div>
-        <div id="folder-parent">
+        <div id="toolbar">
+            <form id="upload-form" enctype="multipart/form-data">
+                <input type="file" id="file-input" name="file">
+                <button type="submit">Upload</button>
+            </form>
+            <div id="download-parent">
+                <button id="download" type="submit" onclick="downloadPath()">Download</button>
+            </div>
+            <button onclick="location.href='/logout'">Logout</button>
+            </div>
+            <div id="folder-parent">
             <!-- File/folder tree will be rendered here -->
+        </div>
+        <div id="pre-parent">
+            <h1>Preview</h1>
         </div>
         <div id="download-link" style="display:none;"></div>
     </body>

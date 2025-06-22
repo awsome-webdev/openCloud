@@ -10,8 +10,7 @@ h1 {
     color: #2d3a4b;
     margin-top: 30px;
 }
-
-#upload-form {
+#toolbar {
     position: absolute;
     left: 3vw;
     display: flex;
@@ -23,7 +22,10 @@ h1 {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    max-width: 400px;
+    width: 41.5vw;
+}
+#upload-form {
+    margin: 5px;    
 }
 
 #upload-form input[type="file"] {
@@ -73,7 +75,25 @@ button {
     max-width: 600px;
     min-height: 200px;
 }
-
+#pre-parent{
+    position: absolute;
+    display: grid;
+    border: none;
+    top: 16vh;
+    right: 3vw;
+    width: 100vw;
+    height: 70vh;
+    overflow: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(20, 1fr);
+    background: #fff;
+    margin: 0 auto 40px auto;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    max-width: 600px;
+    min-height: 200px;
+}
 .folder {
     border: 1px solid #ccc;
     padding: 10px;
@@ -117,7 +137,7 @@ button:hover {
 #download {
     transition: background 0.2s;
 }
-#download-parent {
+/*#download-parent {
     position: absolute;
     left: 37.5vw;
     display: flex;
@@ -131,6 +151,7 @@ button:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     max-width: 400px;
 }
+*/
 @media (max-width: 700px) {
     #folder-parent {
         padding: 15px 5vw;

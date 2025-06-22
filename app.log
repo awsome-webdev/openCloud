@@ -2,3 +2,186 @@
 [2025-06-20 14:16:53,042] INFO in _internal: 127.0.0.1 - - [20/Jun/2025 14:16:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
 [2025-06-20 14:16:53,044] INFO in _internal: 127.0.0.1 - - [20/Jun/2025 14:16:53] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
 [2025-06-20 14:16:53,053] INFO in _internal: 127.0.0.1 - - [20/Jun/2025 14:16:53] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:49:38,697] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:49:38] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:49:38,963] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:49:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:49:38,979] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:49:38] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:49:38,984] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:49:38] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:49:40,680] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:49:40] "GET /tree?path=newfolder HTTP/1.1" 200 -
+[2025-06-22 14:49:41,748] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:49:41] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:52:57,840] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:52:57] "[32mGET /app HTTP/1.1[0m" 302 -
+[2025-06-22 14:52:57,851] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:52:57] "GET / HTTP/1.1" 200 -
+[2025-06-22 14:53:02,059] INFO in app: Login attempt from IP: 127.0.0.1 as admin
+[2025-06-22 14:53:02,059] INFO in app: User logged in: admin from IP: 127.0.0.1
+[2025-06-22 14:53:02,060] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+[2025-06-22 14:53:02,089] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:02] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:53:02,235] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:02] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:02,238] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:02,243] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:02] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:53:07,441] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:07] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:53:07,455] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:07,455] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:07] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:07,461] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:07] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:53:07,729] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:07] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:53:07,742] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:07,746] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:07] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:07,750] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:07] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:53:08,169] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:53:08,182] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:08,182] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:08,187] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:53:08,360] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:53:08,372] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:08,377] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:08,381] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:53:08,520] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:53:08,534] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:08,535] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:08,542] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:53:08,672] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:53:08,688] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:08,688] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:08,694] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:53:08,818] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:53:08,829] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:08,830] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:08,839] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:53:08,985] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:08] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:53:09,001] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:09,002] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:09] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:09,009] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:09] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:53:09,145] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:09] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:53:09,157] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:09,160] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:09] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:09,164] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:09] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:53:09,281] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:09] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:53:09,297] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:09,297] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:09] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:09,303] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:09] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:53:36,170] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:36] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:53:36,183] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:36] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:36,184] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:36] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-22 14:53:36,191] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:36] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:53:56,169] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:56] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:53:56,181] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:56] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-22 14:53:56,184] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:56] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:53:56,188] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:53:56] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:54:31,346] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:54:31] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:54:31,359] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:54:31] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:54:31,359] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:54:31] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-22 14:54:31,364] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:54:31] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:54:56,497] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:54:56] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:54:56,511] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:54:56] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-22 14:54:56,515] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:54:56] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:54:56,519] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:54:56] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:54:56,814] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:54:56] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:54:56,826] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:54:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:54:56,827] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:54:56] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:54:56,832] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:54:56] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:56:09,938] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:09] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:56:09,952] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:09] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-22 14:56:09,952] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:09] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:56:09,959] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:09] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:56:10,090] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:10] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:56:10,103] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:56:10,106] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:10] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:56:10,112] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:10] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:56:18,593] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:18] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:56:18,608] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:18] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-22 14:56:18,611] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:18] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:56:18,619] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:18] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:56:55,664] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:55] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:56:55,677] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:56:55,681] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:55] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:56:55,685] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:56:55] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:57:08,157] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:08] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:57:08,173] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:57:08,175] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:08] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:57:08,183] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:08] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:57:09,245] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:09] "[32mGET /logout HTTP/1.1[0m" 302 -
+[2025-06-22 14:57:09,249] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:09] "GET / HTTP/1.1" 200 -
+[2025-06-22 14:57:13,407] INFO in app: Login attempt from IP: 127.0.0.1 as admin
+[2025-06-22 14:57:13,407] INFO in app: User logged in: admin from IP: 127.0.0.1
+[2025-06-22 14:57:13,408] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+[2025-06-22 14:57:13,413] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:13] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:57:13,446] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:57:13,451] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:13] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:57:13,456] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:13] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:57:28,819] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:28] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:57:28,832] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:57:28,836] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:28] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:57:28,840] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:28] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:57:31,163] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:31] "[32mGET /logout HTTP/1.1[0m" 302 -
+[2025-06-22 14:57:31,167] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:31] "GET / HTTP/1.1" 200 -
+[2025-06-22 14:57:37,587] INFO in app: Login attempt from IP: 127.0.0.1 as admin
+[2025-06-22 14:57:37,587] WARNING in app: Failed login attempt for user: admin from IP: 127.0.0.1
+[2025-06-22 14:57:37,587] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:37] "POST /login HTTP/1.1" 200 -
+[2025-06-22 14:57:49,187] INFO in app: Login attempt from IP: 127.0.0.1 as admin
+[2025-06-22 14:57:49,187] WARNING in app: Failed login attempt for user: admin from IP: 127.0.0.1
+[2025-06-22 14:57:49,188] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:49] "POST /login HTTP/1.1" 200 -
+[2025-06-22 14:57:58,338] INFO in app: Login attempt from IP: 127.0.0.1 as admin
+[2025-06-22 14:57:58,338] WARNING in app: Failed login attempt for user: admin from IP: 127.0.0.1
+[2025-06-22 14:57:58,338] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:57:58] "POST /login HTTP/1.1" 200 -
+[2025-06-22 14:58:02,202] INFO in app: Login attempt from IP: 127.0.0.1 as admin
+[2025-06-22 14:58:02,202] INFO in app: User logged in: admin from IP: 127.0.0.1
+[2025-06-22 14:58:02,202] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:58:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+[2025-06-22 14:58:02,208] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:58:02] "GET /app HTTP/1.1" 200 -
+[2025-06-22 14:58:02,222] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:58:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 14:58:02,225] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:58:02] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-22 14:58:02,230] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 14:58:02] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 14:59:13,649] INFO in _internal:  * Detected change in 'c:\\Users\\Rylan\\Documents\\GitHub\\File_server\\app.py', reloading
+[2025-06-22 14:59:13,725] INFO in _internal:  * Restarting with stat
+[2025-06-22 14:59:17,110] WARNING in _internal:  * Debugger is active!
+[2025-06-22 14:59:17,117] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-06-22 14:59:45,707] INFO in _internal:  * Detected change in 'c:\\Users\\Rylan\\Documents\\GitHub\\File_server\\app.py', reloading
+[2025-06-22 14:59:45,747] INFO in _internal:  * Restarting with stat
+[2025-06-22 14:59:46,158] WARNING in _internal:  * Debugger is active!
+[2025-06-22 14:59:46,164] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-06-22 15:00:05,256] INFO in _internal:  * Detected change in 'c:\\Users\\Rylan\\Documents\\GitHub\\File_server\\app.py', reloading
+[2025-06-22 15:00:05,299] INFO in _internal:  * Restarting with stat
+[2025-06-22 15:00:05,713] WARNING in _internal:  * Debugger is active!
+[2025-06-22 15:00:05,719] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-06-22 15:00:56,525] INFO in _internal:  * Detected change in 'c:\\Users\\Rylan\\Documents\\GitHub\\File_server\\app.py', reloading
+[2025-06-22 15:00:56,576] INFO in _internal:  * Restarting with stat
+[2025-06-22 15:00:57,007] WARNING in _internal:  * Debugger is active!
+[2025-06-22 15:00:57,013] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-06-22 15:12:59,482] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 15:12:59] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-06-22 15:12:59,527] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 15:12:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 15:13:27,241] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 15:13:27] "GET /tree?path=newfolder HTTP/1.1" 200 -
+[2025-06-22 17:33:04,411] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:33:04] "GET /app HTTP/1.1" 200 -
+[2025-06-22 17:33:04,576] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:33:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 17:33:04,577] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:33:04] "GET /static/script.js HTTP/1.1" 200 -
+[2025-06-22 17:33:04,586] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:33:04] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 17:33:04,587] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:33:04] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-06-22 17:34:27,699] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:34:27] "GET /app HTTP/1.1" 200 -
+[2025-06-22 17:34:27,714] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:34:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-06-22 17:34:27,718] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:34:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 17:34:27,720] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:34:27] "GET /static/script.js HTTP/1.1" 200 -
+[2025-06-22 17:34:27,726] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:34:27] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 17:35:00,670] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:35:00] "GET /app HTTP/1.1" 200 -
+[2025-06-22 17:35:00,687] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:35:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-06-22 17:35:00,699] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:35:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 17:35:00,701] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:35:00] "GET /static/script.js HTTP/1.1" 200 -
+[2025-06-22 17:35:00,723] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:35:00] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 17:35:35,248] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:35:35] "GET /tree?path=push-not HTTP/1.1" 200 -
+[2025-06-22 17:35:36,234] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:35:36] "GET /tree HTTP/1.1" 200 -
+[2025-06-22 17:35:39,795] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:35:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-22 17:35:39,818] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:35:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-06-22 17:38:02,116] INFO in _internal:  * Detected change in 'c:\\Users\\Rylan\\Documents\\GitHub\\File_server\\app.py', reloading
+[2025-06-22 17:38:02,171] INFO in _internal:  * Restarting with stat
+[2025-06-22 17:38:02,635] WARNING in _internal:  * Debugger is active!
+[2025-06-22 17:38:02,641] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-06-22 17:38:20,030] INFO in _internal:  * Detected change in 'c:\\Users\\Rylan\\Documents\\GitHub\\File_server\\app.py', reloading
+[2025-06-22 17:39:02,654] INFO in _internal:  * Restarting with stat
+[2025-06-22 17:39:03,073] WARNING in _internal:  * Debugger is active!
+[2025-06-22 17:39:03,079] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-06-22 17:39:57,736] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:39:57] "[33mGET /file/text.txt HTTP/1.1[0m" 404 -
+[2025-06-22 17:40:13,542] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:40:13] "GET /file/test.txt HTTP/1.1" 200 -
+[2025-06-22 17:40:49,454] INFO in _internal:  * Detected change in 'c:\\Users\\Rylan\\Documents\\GitHub\\File_server\\app.py', reloading
+[2025-06-22 17:40:49,498] INFO in _internal:  * Restarting with stat
+[2025-06-22 17:40:49,928] WARNING in _internal:  * Debugger is active!
+[2025-06-22 17:40:49,935] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-06-22 17:40:57,447] INFO in _internal:  * Detected change in 'c:\\Users\\Rylan\\Documents\\GitHub\\File_server\\app.py', reloading
+[2025-06-22 17:41:49,945] INFO in _internal:  * Restarting with stat
+[2025-06-22 17:41:50,369] WARNING in _internal:  * Debugger is active!
+[2025-06-22 17:41:50,375] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-06-22 17:41:50,781] INFO in _internal: 127.0.0.1 - - [22/Jun/2025 17:41:50] "[33mGET /file?path=text.txt HTTP/1.1[0m" 404 -
