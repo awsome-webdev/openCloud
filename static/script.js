@@ -41,6 +41,7 @@ async function open_file(path) {
     const pre = document.getElementById('pre-parent')
     pre.innerHTML = "Loading...";
     pre.innerHTML = "";
+    pre.setAttribute('path', path)
     if (file.ok) {
         const contentType = file.headers.get("Content-Type");
         if (contentType.startsWith("image/")) {
@@ -60,7 +61,7 @@ async function open_file(path) {
         pre.innerHTML = `<pre style="white-space:pre-wrap;word-break:break-all;">${text}</pre>`;
     } else {
         // For other types, offer download
-        pre.innerHTML = `<a href="/file?path=${encodeURIComponent(path)}" download>Download file</a>`;
+        pre.innerHTML = `<a href="/file?path=${encodeURIComponent(path)}" download>Download file (File type not supported)</a>`;
     }
     }
 }
@@ -107,7 +108,14 @@ uploadForm.addEventListener("submit", async function(e) {
 
 // Download file
 function downloadFile(path) {
-    window.location.href = `/download?path=${path}`;
+    const path2 = document.getElementById('pre-parent').getAttribute('path');
+    if (!path2 || path2 === "" || path2 === "undefined") {
+        alert("No file selected for download.");
+        return;
+    }   
+    else {
+        window.location.href = `/download?path=${path2}`;
+    }
 }
 function downloadPath() {
     window.location.href = `/download?path=${currentPath}`;

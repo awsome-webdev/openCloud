@@ -24,6 +24,21 @@ h1 {
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     width: 41.5vw;
 }
+#toolbar2 {
+    position: absolute;
+    right: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto 30px auto;
+    padding: 15px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    max-width: 41.5vw;
+
+}
 #upload-form {
     margin: 5px;    
 }
