@@ -5,13 +5,6 @@ import io
 import zipfile
 from functools import wraps
 import logging
-import threading
-def update_users():
-    global USERS
-    USERS = {}
-    for line in file.splitlines():
-        username, password = line.split(':')
-        USERS[username] = password
 logging.basicConfig(
     level=logging.INFO,
     format='[%(asctime)s] %(levelname)s in %(module)s: %(message)s',
@@ -25,8 +18,6 @@ USERS = {}
 for line in file.splitlines():
     username, password = line.split(':')
     USERS[username] = password
-timer = threading.Timer(60, update_users)
-timer.start()
 app = Flask(__name__)
 with open('secret_key.txt', 'r') as key_file:
     secret_key = key_file.read().splitlines()[0]
@@ -64,6 +55,20 @@ def home():
 @login_required
 def app_home():
     return render_template('index.html')
+@app.route('/makefolder')
+def makefolder():
+    client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    logging.info(f"Folder creation attempt from IP: {client_ip} as {session['user']}")
+    rel_path = request.args.get('path', '').strip('/')
+    folder_name = request.args.get('name', '').strip()
+    abs_path = os.path.join(app.config['UPLOAD_FOLDER'], rel_path, folder_name)
+    if not os.path.commonpath([os.path.abspath(abs_path), app.config['UPLOAD_FOLDER']]) == app.config['UPLOAD_FOLDER']:
+        return 'Invalid path', 400
+    if not os.path.exists(abs_path):
+        os.makedirs(abs_path)
+        return 'Folder created', 200
+    else:
+        return 'Folder already exists', 400
 @app.route('/tree')
 @login_required
 def tree():
@@ -72,6 +77,23 @@ def tree():
     if not os.path.commonpath([os.path.abspath(abs_path), app.config['UPLOAD_FOLDER']]) == app.config['UPLOAD_FOLDER']:
         return jsonify({})  # Prevent directory traversal
     return jsonify(scan_dir(abs_path))
+@app.route('/delete', methods=['GET'])
+@login_required
+def delete():
+    client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    logging.info(f"File delete attempt from IP: {client_ip} as {session['user']}")
+    rel_path = request.args.get('path', '').strip('/')
+    abs_path = os.path.join(app.config['UPLOAD_FOLDER'], rel_path)
+    if not os.path.commonpath([os.path.abspath(abs_path), app.config['UPLOAD_FOLDER']]) == app.config['UPLOAD_FOLDER']:
+        return 'Invalid path', 400
+    if os.path.isfile(abs_path):
+        os.remove(abs_path)
+        return 'File deleted', 200
+    elif os.path.isdir(abs_path):
+        os.rmdir(abs_path)
+        return 'Directory deleted', 200
+    else:
+        return 'File or directory not found', 404
 @app.route('/file')
 @login_required
 def file():
@@ -90,6 +112,8 @@ def upload():
     logging.info(f"File upload attempt from IP: {client_ip} as {session['user']}")
     rel_path = request.args.get('path', '').strip('/')
     upload_dir = os.path.join(app.config['UPLOAD_FOLDER'], rel_path) if rel_path else app.config['UPLOAD_FOLDER']
+    if not os.path.commonpath([os.path.abspath(upload_dir), app.config['UPLOAD_FOLDER']]) == app.config['UPLOAD_FOLDER']:
+        return 'Invalid path', 400
     if not os.path.exists(upload_dir):
         os.makedirs(upload_dir)
     if 'file' not in request.files:

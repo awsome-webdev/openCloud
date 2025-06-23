@@ -88,13 +88,24 @@ displayFiles();
 
 // File upload
 const uploadForm = document.getElementById("upload-form");
-uploadForm.addEventListener("submit", async function(e) {
+const fileInput = document.getElementById("file-input");
+const uploadBtn = document.getElementById("upload-btn");
+
+// Hide the file input
+fileInput.style.display = "none";
+
+// When upload button is clicked, trigger file input
+uploadBtn.addEventListener("click", function(e) {
     e.preventDefault();
-    const fileInput = document.getElementById("file-input");
+    fileInput.click();
+});
+
+// When a file is selected, upload it to the currentPath
+fileInput.addEventListener("change", async function() {
     if (!fileInput.files.length) return;
     const formData = new FormData();
     formData.append("file", fileInput.files[0]);
-    const res = await fetch("/upload", {
+    const res = await fetch(`/upload?path=${encodeURIComponent(currentPath)}`, {
         method: "POST",
         body: formData
     });
@@ -104,8 +115,27 @@ uploadForm.addEventListener("submit", async function(e) {
     } else {
         alert("Upload failed.");
     }
+    // Reset file input so the same file can be uploaded again if needed
+    fileInput.value = "";
 });
-
+function deleteFile(){
+    const path = document.getElementById('pre-parent').getAttribute('path');
+    if (!path || path === "" || path === "undefined") {
+        alert("No file selected for deletion.");
+        return;
+    }   
+    else {
+        fetch(`/delete?path=${path}`)
+            .then(response => {
+                if (response.ok) {
+                    alert("File deleted successfully!");
+                    displayFiles();
+                } else {
+                    alert("Failed to delete the file.");
+                }
+            });
+    }
+}
 // Download file
 function downloadFile(path) {
     const path2 = document.getElementById('pre-parent').getAttribute('path');

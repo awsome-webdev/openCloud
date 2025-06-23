@@ -7,7 +7,7 @@
         <div id="toolbar">
             <form id="upload-form" enctype="multipart/form-data">
                 <input type="file" id="file-input" name="file">
-                <button type="submit">Upload</button>
+                <button id="upload-btn" type="button">Upload</button>
             </form>
             <div id="download-parent">
                 <button id="download" type="submit" onclick="downloadPath()">Download</button>
@@ -19,6 +19,7 @@
         </div>
         <div id="toolbar2">
             <button onclick="downloadFile()">Download File</button>
+            <button onclick="deleteFile()">Delete File</button>
         </div>
         <div id="pre-parent">
             <h1>Preview</h1>

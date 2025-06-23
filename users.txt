@@ -1,1 +1,1 @@
-admin:@Rythehi4905
+admin:admin
