@@ -51,6 +51,21 @@ def login_required(f):
 @app.route('/')
 def home():
     return render_template('login.html')
+@app.route('/save', methods=['POST'])
+def save():
+    client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    logging.info(f"Save attempt from IP: {client_ip} as {session.get('user', 'guest')}")
+    rel_path = request.args.get('path', '').strip('/')
+    content = request.form.get('content', '')
+    abs_path = os.path.join(app.config['UPLOAD_FOLDER'], rel_path)
+    if not os.path.commonpath([os.path.abspath(abs_path), app.config['UPLOAD_FOLDER']]) == app.config['UPLOAD_FOLDER']:
+        return 'Invalid path', 400
+    if not os.path.exists(os.path.dirname(abs_path)):
+        os.makedirs(os.path.dirname(abs_path))
+    with open(abs_path, 'w') as f:
+        f.write(content)
+    return 'File saved', 200
+
 @app.route('/app')
 @login_required
 def app_home():

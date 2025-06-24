@@ -8,6 +8,7 @@ async function getfiles(path = "") {
 
 function createExplorerElement(tree, path = "") {
     const container = document.createElement("ul");
+    document.getElementById('folder-list').innerHTML = "";
     for (const key in tree) {
         const value = tree[key];
         const fullPath = path ? `${path}/${key}` : key;
@@ -22,6 +23,7 @@ function createExplorerElement(tree, path = "") {
                 li.setAttribute('onclick', `open_file('${fullPath}')`);
             }
             li.style.cursor = "pointer";
+            container.appendChild(li);
         } else {
             // Folder
             li.innerHTML = `<span class="folder-link" style="cursor:pointer;color:#2d7ff9;">📁 ${key}</span>`;
@@ -30,15 +32,17 @@ function createExplorerElement(tree, path = "") {
                 currentPath = fullPath;
                 displayFiles();
             };
+            document.getElementById('folder-list').appendChild(li);
         }
-        container.appendChild(li);
     }
     return container;
 }
 async function open_file(path) {
     const file = await fetch(`/file?path=${path}`);
     console.log(file)
-    const pre = document.getElementById('pre-parent')
+    const parent = document.getElementById('pre-parent');
+    const pre = document.getElementById('preview')
+    parent.style.display = "block";
     pre.innerHTML = "Loading...";
     pre.innerHTML = "";
     pre.setAttribute('path', path)
@@ -58,11 +62,35 @@ async function open_file(path) {
             pre.innerHTML = `<audio controls><source src="${url}" type="${contentType}"></audio>`;
     } else if (contentType.startsWith("text/") || contentType === "application/json") {
         const text = await file.text();
-        pre.innerHTML = `<pre style="white-space:pre-wrap;word-break:break-all;">${text}</pre>`;
+        pre.innerHTML = `<div contenteditable="true" class="text-editor" style="white-space:pre-wrap;word-break:break-all;">${text}</div>`;
+        document.getElementById('save-btn').style.display = 'block';
+    } else if (contentType === "application/pdf") {
+    const blob = await file.blob();
+    const url = URL.createObjectURL(blob);
+    pre.innerHTML = `<iframe src="${url}" style="width:100%;height:70vh;border:none;"></iframe>`;
     } else {
         // For other types, offer download
         pre.innerHTML = `<a href="/file?path=${encodeURIComponent(path)}" download>Download file (File type not supported)</a>`;
     }
+    }
+}
+async function saveFile() {
+    const pre = document.getElementById('pre-parent');
+    const path = pre.getAttribute('path');
+    const contentElement = pre.querySelector('.text-editor');
+    const content = contentElement ? contentElement.innerText : null;
+    const formData = new FormData();
+    formData.append('content', content);
+
+    const response = await fetch(`/save?path=${encodeURIComponent(path)}`, {
+        method: 'POST',
+        body: formData
+    });
+
+    if (response.ok) {
+        alert('File saved!');
+    } else {
+        alert('Failed to save file.');
     }
 }
 function displayFiles() {
@@ -149,4 +177,19 @@ function downloadFile(path) {
 }
 function downloadPath() {
     window.location.href = `/download?path=${currentPath}`;
+}
+function toggleFullScreen(){
+    const pre = document.getElementById('pre-parent');
+    if (!document.fullscreenElement) {
+        pre.requestFullscreen().catch(err => {
+            console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+            
+        });
+        document.getElementById('preview').style.height = "90vh";
+        document.getElementById('preview').style.width = "100vw";
+    } else {
+        document.exitFullscreen();
+        document.getElementById('preview').style.height = "90%";
+        document.getElementById('preview').style.width = "100%";
+    }
 }

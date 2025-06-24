@@ -14,15 +14,27 @@
             </div>
             <button onclick="location.href='/logout'">Logout</button>
             </div>
-            <div id="folder-parent">
-            <!-- File/folder tree will be rendered here -->
-        </div>
         <div id="toolbar2">
             <button onclick="downloadFile()">Download File</button>
             <button onclick="deleteFile()">Delete File</button>
         </div>
+        <div id="sidebar">
+            <h2>Folders</h2>
+            <div id="folder-list">
+                <!-- Folder list will be populated here -->
+            </div>
+        </div>
+        <div id="folder-parent">
+            <!-- File/folder tree will be rendered here -->
+        </div>
         <div id="pre-parent">
-            <h1>Preview</h1>
+            <div id="pre-close">
+                <button id="pre-close-btn" onclick="document.getElementById('pre-parent').style.display='none'; document.exitFullscreen(); document.getElementById('preview').style.height = '90%';document.getElementById('preview').style.width = '100%';">Close</button>
+                <button onclick="toggleFullScreen()">Full Screen</button>
+            </div>
+            <div id="preview">
+
+            </div>
         </div>
         <div id="download-link" style="display:none;"></div>
     </body>
