@@ -23,7 +23,6 @@ function createExplorerElement(tree, path = "") {
                 li.setAttribute('onclick', `open_file('${fullPath}')`);
             }
             li.style.cursor = "pointer";
-            container.appendChild(li);
         } else {
             // Folder
             li.innerHTML = `<span class="folder-link" style="cursor:pointer;color:#2d7ff9;">📁 ${key}</span>`;
@@ -32,8 +31,8 @@ function createExplorerElement(tree, path = "") {
                 currentPath = fullPath;
                 displayFiles();
             };
-            document.getElementById('folder-list').appendChild(li);
         }
+        container.appendChild(li);
     }
     return container;
 }

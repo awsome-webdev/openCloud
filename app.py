@@ -70,6 +70,9 @@ def save():
 @login_required
 def app_home():
     return render_template('index.html')
+@app.route('/mobile')
+def mobile_home():
+    return render_template('mobile-index.html')
 @app.route('/makefolder')
 def makefolder():
     client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
@@ -192,4 +195,4 @@ def logout():
     return redirect(url_for('home'))
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True, port=8080, host='0.0.0.0')

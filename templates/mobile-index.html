@@ -1,18 +1,7 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='mobile-style.css')}}">
         <title>File Server</title>
-        <script>
-  (function () {
-    function isMobileDevice() {
-      return /Mobile|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    }
-
-    if (isMobileDevice()) {
-      window.location.replace("/mobile");  // Use replace to avoid adding to history
-    }
-  })();
-</script>
     </head>
     <body>
         <div id="toolbar">
@@ -24,11 +13,9 @@
                 <button id="download" type="submit" onclick="downloadPath()">Download</button>
             </div>
             <button onclick="location.href='/logout'">Logout</button>
-            </div>
-        <div id="toolbar2">
             <button onclick="downloadFile()">Download File</button>
             <button onclick="deleteFile()">Delete File</button>
-        </div>
+            </div>
         <div id="sidebar">
             <h2>Folders</h2>
             <div id="folder-list">
@@ -50,4 +37,4 @@
         <div id="download-link" style="display:none;"></div>
     </body>
 </html>
-<script src="{{url_for('static', filename='script.js')}}"></script>
+<script src="{{url_for('static', filename='mobile-script.js')}}"></script>
