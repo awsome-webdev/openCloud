@@ -316,3 +316,50 @@
 [2025-06-25 17:43:00,768] INFO in _internal:  * Restarting with stat
 [2025-06-25 17:43:01,243] WARNING in _internal:  * Debugger is active!
 [2025-06-25 17:43:01,250] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-06-25 17:45:22,385] INFO in _internal: 127.0.0.1 - - [25/Jun/2025 17:45:22] "GET /app HTTP/1.1" 200 -
+[2025-06-25 17:45:22,536] INFO in _internal: 127.0.0.1 - - [25/Jun/2025 17:45:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-25 17:45:22,546] INFO in _internal: 127.0.0.1 - - [25/Jun/2025 17:45:22] "GET /static/script.js HTTP/1.1" 200 -
+[2025-06-25 17:45:22,554] INFO in _internal: 127.0.0.1 - - [25/Jun/2025 17:45:22] "GET /tree HTTP/1.1" 200 -
+[2025-06-25 17:45:45,121] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:45:45] "GET /mobile HTTP/1.1" 200 -
+[2025-06-25 17:45:45,184] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:45:45] "GET /static/mobile-style.css HTTP/1.1" 200 -
+[2025-06-25 17:45:45,190] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:45:45] "GET /static/mobile-script.js HTTP/1.1" 200 -
+[2025-06-25 17:45:45,221] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:45:45] "GET /tree HTTP/1.1" 200 -
+[2025-06-25 17:45:46,481] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:45:46] "GET /file?path=world.png HTTP/1.1" 200 -
+[2025-06-25 17:46:03,863] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:46:03] "GET /mobile HTTP/1.1" 200 -
+[2025-06-25 17:46:03,896] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:46:03] "GET /static/mobile-style.css HTTP/1.1" 200 -
+[2025-06-25 17:46:03,911] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:46:03] "GET /static/mobile-script.js HTTP/1.1" 200 -
+[2025-06-25 17:46:03,934] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:46:03] "GET /tree HTTP/1.1" 200 -
+[2025-06-25 17:46:04,870] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:46:04] "GET /file?path=world.png HTTP/1.1" 200 -
+[2025-06-25 17:47:41,754] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:47:41] "GET /mobile HTTP/1.1" 200 -
+[2025-06-25 17:47:41,789] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:47:41] "GET /static/mobile-style.css HTTP/1.1" 200 -
+[2025-06-25 17:47:41,800] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:47:41] "GET /static/mobile-script.js HTTP/1.1" 200 -
+[2025-06-25 17:47:41,824] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:47:41] "GET /tree HTTP/1.1" 200 -
+[2025-06-25 17:47:54,577] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:47:54] "GET /mobile HTTP/1.1" 200 -
+[2025-06-25 17:47:54,613] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:47:54] "GET /static/mobile-style.css HTTP/1.1" 200 -
+[2025-06-25 17:47:54,622] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:47:54] "GET /static/mobile-script.js HTTP/1.1" 200 -
+[2025-06-25 17:47:54,654] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:47:54] "GET /tree HTTP/1.1" 200 -
+[2025-06-25 17:48:58,704] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:48:58] "GET /mobile HTTP/1.1" 200 -
+[2025-06-25 17:48:58,728] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:48:58] "GET /static/mobile-style.css HTTP/1.1" 200 -
+[2025-06-25 17:48:58,742] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:48:58] "GET /static/mobile-script.js HTTP/1.1" 200 -
+[2025-06-25 17:48:58,766] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:48:58] "GET /tree HTTP/1.1" 200 -
+[2025-06-25 17:49:05,979] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:49:05] "GET /mobile HTTP/1.1" 200 -
+[2025-06-25 17:49:06,005] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:49:06] "GET /static/mobile-style.css HTTP/1.1" 200 -
+[2025-06-25 17:49:06,012] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:49:06] "GET /static/mobile-script.js HTTP/1.1" 200 -
+[2025-06-25 17:49:06,043] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:49:06] "GET /tree HTTP/1.1" 200 -
+[2025-06-25 17:49:07,105] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:49:07] "GET /file?path=world.png HTTP/1.1" 200 -
+[2025-06-25 17:49:17,309] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:49:17] "GET /mobile HTTP/1.1" 200 -
+[2025-06-25 17:49:17,332] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:49:17] "GET /static/mobile-style.css HTTP/1.1" 200 -
+[2025-06-25 17:49:17,343] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:49:17] "GET /static/mobile-script.js HTTP/1.1" 200 -
+[2025-06-25 17:49:17,385] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:49:17] "GET /tree HTTP/1.1" 200 -
+[2025-06-25 17:49:18,758] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:49:18] "GET /file?path=world.png HTTP/1.1" 200 -
+[2025-06-25 17:49:32,611] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:49:32] "GET /file?path=world.png HTTP/1.1" 200 -
+[2025-06-25 17:49:43,194] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:49:43] "GET /tree?path=newfolder HTTP/1.1" 200 -
+[2025-06-25 17:49:44,654] INFO in app: File download attempt from IP: 192.168.40.97 as admin
+[2025-06-25 17:49:44,689] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:49:44] "GET /download?path=newfolder HTTP/1.1" 200 -
+[2025-06-25 17:50:00,880] INFO in _internal: 192.168.40.97 - - [25/Jun/2025 17:50:00] "GET /tree HTTP/1.1" 200 -
+[2025-06-25 17:50:19,730] INFO in _internal: 127.0.0.1 - - [25/Jun/2025 17:50:19] "OPTIONS /tree HTTP/1.1" 200 -
+[2025-06-25 17:50:19,734] INFO in _internal: 127.0.0.1 - - [25/Jun/2025 17:50:19] "[32mGET /tree HTTP/1.1[0m" 302 -
+[2025-06-25 17:50:29,662] INFO in _internal: 127.0.0.1 - - [25/Jun/2025 17:50:29] "OPTIONS /tree HTTP/1.1" 200 -
+[2025-06-25 17:50:29,664] INFO in _internal: 127.0.0.1 - - [25/Jun/2025 17:50:29] "[32mGET /tree HTTP/1.1[0m" 302 -
+[2025-06-25 17:50:31,947] INFO in _internal: 127.0.0.1 - - [25/Jun/2025 17:50:31] "OPTIONS /tree HTTP/1.1" 200 -
+[2025-06-25 17:50:31,949] INFO in _internal: 127.0.0.1 - - [25/Jun/2025 17:50:31] "[32mGET /tree HTTP/1.1[0m" 302 -
