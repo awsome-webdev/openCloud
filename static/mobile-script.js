@@ -18,14 +18,16 @@ function createExplorerElement(tree, path = "") {
             li.innerHTML = `📄 ${key}`;
             if (fullPath != key) {
                 li.setAttribute('onclick', `open_file('${fullPath}')`);
+                li.setAttribute('style', 'user-select: none;');
             }
             else {
                 li.setAttribute('onclick', `open_file('${fullPath}')`);
+                li.setAttribute('style', 'user-select: none;');
             }
             li.style.cursor = "pointer";
         } else {
             // Folder
-            li.innerHTML = `<span class="folder-link" style="cursor:pointer;color:#2d7ff9;">📁 ${key}</span>`;
+            li.innerHTML = `<span class="folder-link" style="cursor:pointer;color:#2d7ff9;user-select: none;">📁 ${key}</span>`;
             li.querySelector(".folder-link").onclick = () => {
                 pathStack.push(currentPath);
                 currentPath = fullPath;
@@ -37,6 +39,7 @@ function createExplorerElement(tree, path = "") {
     return container;
 }
 async function open_file(path) {
+    showFileOptions();
     const file = await fetch(`/file?path=${path}`);
     console.log(file)
     const parent = document.getElementById('pre-parent');
@@ -146,7 +149,7 @@ fileInput.addEventListener("change", async function() {
     fileInput.value = "";
 });
 function deleteFile(){
-    const path = document.getElementById('pre-parent').getAttribute('path');
+    const path = document.getElementById('preview').getAttribute('path');
     if (!path || path === "" || path === "undefined") {
         alert("No file selected for deletion.");
         return;
@@ -165,7 +168,7 @@ function deleteFile(){
 }
 // Download file
 function downloadFile(path) {
-    const path2 = document.getElementById('pre-parent').getAttribute('path');
+    const path2 = document.getElementById('preview').getAttribute('path');
     if (!path2 || path2 === "" || path2 === "undefined") {
         alert("No file selected for download.");
         return;
@@ -192,3 +195,27 @@ function toggleFullScreen(){
         document.getElementById('preview').style.width = "100%";
     }
 }
+function showFolderOptions(){
+    const btn1 = document.getElementById('upload-btn');
+    const btn2 = document.getElementById('download-btn');
+    const btn3 = document.getElementById('logout-btn');
+    const file1 = document.getElementById('delete-btn');
+    const file2 = document.getElementById('download-btn');
+    btn1.style.display = 'block';
+    btn2.style.display = 'block';
+    btn3.style.display = 'block';
+    file1.style.display = 'none';
+    file2.style.display = 'none';
+}
+function showFileOptions(){
+    const btn1 = document.getElementById('delete-btn');
+    const btn2 = document.getElementById('download-btn');
+    const folder1 = document.getElementById('upload-btn');
+    const folder2 = document.getElementById('logout-btn');
+    const folder3 = document.getElementById('logout-btn');
+    btn1.style.display = 'block';
+    btn2.style.display = 'block';
+    folder1.style.display = 'block';
+    folder2.style.display = 'block';
+    folder3.style.display = 'block';
+}   

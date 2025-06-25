@@ -147,7 +147,7 @@ fileInput.addEventListener("change", async function() {
     fileInput.value = "";
 });
 function deleteFile(){
-    const path = document.getElementById('pre-parent').getAttribute('path');
+    const path = document.getElementById('preview').getAttribute('path');
     if (!path || path === "" || path === "undefined") {
         alert("No file selected for deletion.");
         return;
@@ -166,7 +166,7 @@ function deleteFile(){
 }
 // Download file
 function downloadFile(path) {
-    const path2 = document.getElementById('pre-parent').getAttribute('path');
+    const path2 = document.getElementById('preview').getAttribute('path');
     if (!path2 || path2 === "" || path2 === "undefined") {
         alert("No file selected for download.");
         return;

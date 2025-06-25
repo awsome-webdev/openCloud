@@ -12,19 +12,20 @@ h1 {
 }
 #toolbar {
     position: absolute;
+    z-index: 1000;
     right: -4vw;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin: 20px auto 30px auto;
     padding: 15px 20px;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     bottom: -4vh;
-    width: 105vw;
-    height: 6vh;
+    width: 100vw;
+    height: 8vh;
+    scale: 1;
 }
 #upload-form {
     margin: 5px;    
@@ -81,7 +82,7 @@ button {
     top: 1vh;
     left: 1vw;
     width: 95vw;
-    height: 90vh;
+    height: calc(80vh + env(safe-area-inset-bottom));
     overflow: auto;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(20, 1fr);
@@ -112,15 +113,15 @@ button {
     display: none;
     border: none;
     top: 3vh;
-    right: 29vw;
+    right: 5vw;
     overflow: auto;
     background: #fff;
     margin: 0 auto 40px auto;
     padding: 30px 40px;
     border-radius: 10px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    width: 40vw;
-    height: 86vh;
+    width: 80vw;
+    height: 80vh;
     padding: 10px;
 }
 .folder {

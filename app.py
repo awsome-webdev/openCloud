@@ -52,6 +52,7 @@ def login_required(f):
 def home():
     return render_template('login.html')
 @app.route('/save', methods=['POST'])
+@login_required
 def save():
     client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
     logging.info(f"Save attempt from IP: {client_ip} as {session.get('user', 'guest')}")
@@ -65,15 +66,33 @@ def save():
     with open(abs_path, 'w') as f:
         f.write(content)
     return 'File saved', 200
-
+@app.route('/rename',)
+@login_required
+def rename():
+    client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    logging.info(f"Rename attempt from IP: {client_ip} as {session['user']}")
+    rel_path = request.args.get('path', '').strip('/')
+    new_name = request.args.get('new_name', '').strip()
+    abs_path = os.path.join(app.config['UPLOAD_FOLDER'], rel_path)
+    if not os.path.commonpath([os.path.abspath(abs_path), app.config['UPLOAD_FOLDER']]) == app.config['UPLOAD_FOLDER']:
+        return 'Invalid path', 400
+    if not os.path.exists(abs_path):
+        return 'File or directory not found', 404
+    new_abs_path = os.path.join(os.path.dirname(abs_path), new_name)
+    if os.path.exists(new_abs_path):
+        return 'New name already exists', 400
+    os.rename(abs_path, new_abs_path)
+    return 'Renamed successfully', 200
 @app.route('/app')
 @login_required
 def app_home():
     return render_template('index.html')
 @app.route('/mobile')
+@login_required
 def mobile_home():
     return render_template('mobile-index.html')
 @app.route('/makefolder')
+@login_required
 def makefolder():
     client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
     logging.info(f"Folder creation attempt from IP: {client_ip} as {session['user']}")
