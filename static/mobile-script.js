@@ -1,6 +1,8 @@
 let currentPath = "";
 let pathStack = [];
-
+setInterval(() => {
+    updatepath();
+}, 100);
 async function getfiles(path = "") {
     const response = await fetch("/tree" + (path ? `?path=${encodeURIComponent(path)}` : ""));
     return await response.json();
@@ -195,27 +197,67 @@ function toggleFullScreen(){
         document.getElementById('preview').style.width = "100%";
     }
 }
+function renameFolder(){
+    const path = currentPath
+    if (!path || path === "" || path === "undefined") {
+        alert("No folder selected for renaming.");
+        return;
+    }   
+    else {
+        const newName = prompt("Enter new name for the folder:");
+        if (newName) {
+            fetch(`/rename?path=${encodeURIComponent(path)}&new_name=${encodeURIComponent(newName)}`, {
+                method: 'GET'
+            }).then(response => {
+                if (response.ok) {
+                    alert("Folder renamed successfully!");
+                    currentPath = `${pathStack.pop()}/${newName}` || "";
+                    displayFiles();
+                } else {
+                    alert("Failed to rename the folder.");
+                }
+            });
+        }
+    }
+}
 function showFolderOptions(){
-    const btn1 = document.getElementById('upload-btn');
-    const btn2 = document.getElementById('download-btn');
-    const btn3 = document.getElementById('logout-btn');
-    const file1 = document.getElementById('delete-btn');
-    const file2 = document.getElementById('download-btn');
-    btn1.style.display = 'block';
-    btn2.style.display = 'block';
-    btn3.style.display = 'block';
-    file1.style.display = 'none';
-    file2.style.display = 'none';
+    const folder = document.getElementById('folder-options');
+    const file = document.getElementById('file-options');
+    folder.style.display = 'flex';
+    file.style.display = 'none';
 }
 function showFileOptions(){
-    const btn1 = document.getElementById('delete-btn');
-    const btn2 = document.getElementById('download-btn');
-    const folder1 = document.getElementById('upload-btn');
-    const folder2 = document.getElementById('logout-btn');
-    const folder3 = document.getElementById('logout-btn');
-    btn1.style.display = 'block';
-    btn2.style.display = 'block';
-    folder1.style.display = 'block';
-    folder2.style.display = 'block';
-    folder3.style.display = 'block';
-}   
+    const folder = document.getElementById('folder-options');
+    const file = document.getElementById('file-options');
+    folder.style.display = 'none';
+    file.style.display = 'flex';
+}
+function updatepath(){
+    if (currentPath === "") {
+        document.getElementById('path-h3').innerText = "~/";
+        return;
+    }
+    document.getElementById('path-h3').innerText = `~/${currentPath}`;
+}
+function renameFile(){
+    const path = document.getElementById('preview').getAttribute('path');
+    if (!path || path === "" || path === "undefined") {
+        alert("No file selected for renaming.");
+        return;
+    }   
+    else {
+        const newName = prompt("Enter new name for the file:");
+        if (newName) {
+            fetch(`/rename?path=${encodeURIComponent(path)}&new_name=${encodeURIComponent(newName)}`, {
+                method: 'GET'
+            }).then(response => {
+                if (response.ok) {
+                    alert("File renamed successfully!");
+                    displayFiles();
+                } else {
+                    alert("Failed to rename the file.");
+                }
+            });
+        }
+    }
+}

@@ -24,10 +24,16 @@
                 <button id="download" type="submit" onclick="downloadPath()">Download</button>
             </div>
             <button onclick="location.href='/logout'">Logout</button>
+            <button onclick="renameFolder()">Rename Folder</button>
+            <!--<button onclick="createFolder()">New Folder</button>-->
             </div>
         <div id="toolbar2">
             <button onclick="downloadFile()">Download File</button>
             <button onclick="deleteFile()">Delete File</button>
+            <button onclick="renameFile()">Rename</button>
+        </div>
+        <div id="path">
+            <h3 id="path-h3"></h3>
         </div>
         <div id="sidebar">
             <h2>Folders</h2>

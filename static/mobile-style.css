@@ -79,10 +79,10 @@ button {
     position: absolute;
     display: grid;
     border: none;
-    top: 1vh;
+    top: 8vh;
     left: 1vw;
     width: 95vw;
-    height: calc(80vh + env(safe-area-inset-bottom));
+    height: calc(74vh + env(safe-area-inset-bottom));
     overflow: auto;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(20, 1fr);
@@ -132,7 +132,20 @@ button {
     font-weight: 600;
     color: #1a5fc2;
 }
-
+#folder-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#file-options {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 ul {
     list-style: none;
     padding-left: 20px;
@@ -192,4 +205,20 @@ button:hover {
         flex-direction: column;
         gap: 8px;
     }
+}
+#path {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 6vh;
+    margin: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    overflow-y: auto;
+}
+#path h3{
+    font-size: 250%;
 }

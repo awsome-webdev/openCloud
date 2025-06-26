@@ -1,6 +1,8 @@
 let currentPath = "";
 let pathStack = [];
-
+setInterval(() => {
+    updatepath();
+}, 100);
 async function getfiles(path = "") {
     const response = await fetch("/tree" + (path ? `?path=${encodeURIComponent(path)}` : ""));
     return await response.json();
@@ -193,3 +195,70 @@ function toggleFullScreen(){
         document.getElementById('preview').style.width = "100%";
     }
 }
+function renameFolder(){
+    const path = currentPath
+    if (!path || path === "" || path === "undefined") {
+        alert("No folder selected for renaming.");
+        return;
+    }   
+    else {
+        const newName = prompt("Enter new name for the folder:");
+        if (newName) {
+            fetch(`/rename?path=${encodeURIComponent(path)}&new_name=${encodeURIComponent(newName)}`, {
+                method: 'GET'
+            }).then(response => {
+                if (response.ok) {
+                    alert("Folder renamed successfully!");
+                    currentPath = `${pathStack.pop()}/${newName}` || "";
+                    displayFiles();
+                } else {
+                    alert("Failed to rename the folder.");
+                }
+            });
+        }
+    }
+}
+function updatepath(){
+    if (currentPath === "") {
+        document.getElementById('path-h3').innerText = "~/";
+        return;
+    }
+    document.getElementById('path-h3').innerText = `~/${currentPath}`;
+}
+function renameFile(){
+    const path = document.getElementById('preview').getAttribute('path');
+    if (!path || path === "" || path === "undefined") {
+        alert("No file selected for renaming.");
+        return;
+    }   
+    else {
+        const newName = prompt("Enter new name for the file:");
+        if (newName) {
+            fetch(`/rename?path=${encodeURIComponent(path)}&new_name=${encodeURIComponent(newName)}`, {
+                method: 'GET'
+            }).then(response => {
+                if (response.ok) {
+                    alert("File renamed successfully!");
+                    displayFiles();
+                } else {
+                    alert("Failed to rename the file.");
+                }
+            });
+        }
+    }
+}
+//function createFolder(){
+//    const newFolderName = prompt("Enter the name for the new folder:");
+//    if (newFolderName) {
+//        fetch(`/makefolder?path=${encodeURIComponent(currentPath)}&folder_name=${encodeURIComponent(newFolderName)}`, {
+//            method: 'GET'
+//        }).then(response => {
+//            if (response.ok) {
+//                alert("Folder created successfully!");
+//                displayFiles();
+//            } else {
+//                alert("Failed to create the folder.");
+//            }
+//        });
+//    }
+//}

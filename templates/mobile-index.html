@@ -5,17 +5,26 @@
     </head>
     <body>
         <div id="toolbar">
-            <form id="upload-form" enctype="multipart/form-data">
-                <input type="file" id="file-input" name="file">
-                <button id="upload-btn" type="button">Upload</button>
-            </form>
-            <div id="download-parent">
+            <div id="folder-options">"
+                <form id="upload-form" enctype="multipart/form-data">
+                    <input type="file" id="file-input" name="file">
+                    <button id="upload-btn" type="button">Upload</button>
+                </form>
+                <div id="download-parent">
                 <button id="download" type="submit" onclick="downloadPath()">Download</button>
+                </div>
+                <button onclick="location.href='/logout'" id="logout-btn">Logout</button>
+                <button onclick="renameFolder()">Rename Folder</button>
             </div>
-            <button onclick="location.href='/logout'" id="logout-btn">Logout</button>
-            <button onclick="downloadFile()" id="download-btn">Download File</button>
-            <button onclick="deleteFile()" id="delete-btn">Delete File</button>
+            <div id="file-options">
+                <button onclick="downloadFile()" id="download-btn">Download File</button>
+                <button onclick="deleteFile()" id="delete-btn">Delete File</button>
+                <button onclick="renameFile()" id="rename-btn">Rename</button>
             </div>
+        </div>
+        <div id="path">
+            <h3 id="path-h3"></h3>
+        </div>
         <div id="sidebar">
             <h2>Folders</h2>
             <div id="folder-list">
