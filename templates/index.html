@@ -15,22 +15,24 @@
 </script>
     </head>
     <body>
-        <div id="toolbar">
-            <form id="upload-form" enctype="multipart/form-data">
-                <input type="file" id="file-input" name="file">
-                <button id="upload-btn" type="button">Upload</button>
-            </form>
-            <div id="download-parent">
+    <div id="toolbar">
+            <div id="folder-options">
+                <form id="upload-form" enctype="multipart/form-data">
+                    <input type="file" id="file-input" name="file">
+                    <button id="upload-btn" type="button">Upload</button>
+                </form>
+                <div id="download-parent">
                 <button id="download" type="submit" onclick="downloadPath()">Download</button>
+                </div>
+                <button onclick="location.href='/logout'" id="logout-btn">Logout</button>
+                <button onclick="renameFolder()">Rename Folder</button>
+                <button onclick="createFolder()">Create Folder</button>
             </div>
-            <button onclick="location.href='/logout'">Logout</button>
-            <button onclick="renameFolder()">Rename Folder</button>
-            <!--<button onclick="createFolder()">New Folder</button>-->
+            <div id="file-options">
+                <button onclick="downloadFile()" id="download-btn">Download File</button>
+                <button onclick="deleteFile()" id="delete-btn">Delete File</button>
+                <button onclick="renameFile()" id="rename-btn">Rename</button>
             </div>
-        <div id="toolbar2">
-            <button onclick="downloadFile()">Download File</button>
-            <button onclick="deleteFile()">Delete File</button>
-            <button onclick="renameFile()">Rename</button>
         </div>
         <div id="path">
             <h3 id="path-h3"></h3>
@@ -46,7 +48,7 @@
         </div>
         <div id="pre-parent">
             <div id="pre-close">
-                <button id="pre-close-btn" onclick="document.getElementById('pre-parent').style.display='none'; document.exitFullscreen(); document.getElementById('preview').style.height = '90%';document.getElementById('preview').style.width = '100%';">Close</button>
+                <button id="pre-close-btn" onclick="document.getElementById('pre-parent').style.display='none'; document.exitFullscreen(); document.getElementById('preview').style.height = '90%';document.getElementById('preview').style.width = '100%'; showFolderOptions()">Close</button>
                 <button onclick="toggleFullScreen()">Full Screen</button>
             </div>
             <div id="preview">
@@ -56,4 +58,5 @@
         <div id="download-link" style="display:none;"></div>
     </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/aes-js@3.1.2/index.min.js"></script>
 <script src="{{url_for('static', filename='script.js')}}"></script>

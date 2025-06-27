@@ -1,0 +1,143 @@
+[2025-06-26 18:12:24,910] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.40.111:8080
+[2025-06-26 18:12:24,910] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-26 18:12:24,923] INFO in _internal:  * Restarting with stat
+[2025-06-26 18:12:25,386] WARNING in _internal:  * Debugger is active!
+[2025-06-26 18:12:25,393] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-06-26 18:16:25,528] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:16:25] "GET /app HTTP/1.1" 200 -
+[2025-06-26 18:16:25,664] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:16:25] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-26 18:16:25,686] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:16:25] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-26 18:16:25,692] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:16:25] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:17:19,324] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:17:19] "GET /app HTTP/1.1" 200 -
+[2025-06-26 18:17:19,348] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:17:19] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-26 18:17:19,349] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:17:19] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-26 18:17:19,357] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:17:19] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:20:00,530] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:20:00] "GET /app HTTP/1.1" 200 -
+[2025-06-26 18:20:00,560] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:20:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-26 18:20:00,561] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:20:00] "GET /static/script.js HTTP/1.1" 200 -
+[2025-06-26 18:20:00,572] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:20:00] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:20:03,118] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:20:03] "GET /file?path=WORLD.png HTTP/1.1" 200 -
+[2025-06-26 18:23:12,818] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:23:12] "GET /app HTTP/1.1" 200 -
+[2025-06-26 18:23:12,843] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:23:12] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-26 18:23:12,843] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:23:12] "GET /static/script.js HTTP/1.1" 200 -
+[2025-06-26 18:23:12,853] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:23:12] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:23:26,354] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:23:26] "GET /app HTTP/1.1" 200 -
+[2025-06-26 18:23:26,382] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:23:26] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-26 18:23:26,382] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:23:26] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-26 18:23:26,403] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:23:26] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:24:10,028] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:24:10] "GET /app HTTP/1.1" 200 -
+[2025-06-26 18:24:10,047] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:24:10] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-26 18:24:10,048] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:24:10] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-26 18:24:10,060] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:24:10] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:24:12,521] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:24:12] "[36mGET /file?path=WORLD.png HTTP/1.1[0m" 304 -
+[2025-06-26 18:24:26,842] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:24:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-26 18:24:26,857] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:24:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-06-26 18:25:03,342] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:03] "GET /app HTTP/1.1" 200 -
+[2025-06-26 18:25:03,388] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:03] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-26 18:25:03,391] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:03] "GET /static/script.js HTTP/1.1" 200 -
+[2025-06-26 18:25:03,403] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:03] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:25:03,441] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:03] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-06-26 18:25:05,866] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:05] "[36mGET /file?path=WORLD.png HTTP/1.1[0m" 304 -
+[2025-06-26 18:25:22,540] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:22] "GET /app HTTP/1.1" 200 -
+[2025-06-26 18:25:22,559] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:22] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-26 18:25:22,559] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:22] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-26 18:25:22,572] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:22] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:25:24,233] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:24] "[36mGET /file?path=WORLD.png HTTP/1.1[0m" 304 -
+[2025-06-26 18:25:37,002] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:37] "GET /app HTTP/1.1" 200 -
+[2025-06-26 18:25:37,026] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:37] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-26 18:25:37,026] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:37] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-26 18:25:37,032] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:37] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:25:37,862] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:37] "[36mGET /file?path=WORLD.png HTTP/1.1[0m" 304 -
+[2025-06-26 18:25:54,841] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:54] "GET /app HTTP/1.1" 200 -
+[2025-06-26 18:25:54,865] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:54] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-26 18:25:54,865] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:54] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-06-26 18:25:54,872] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:54] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:25:55,690] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:25:55] "[36mGET /file?path=WORLD.png HTTP/1.1[0m" 304 -
+[2025-06-26 18:26:10,850] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:26:10] "GET /tree?path=newfolder HTTP/1.1" 200 -
+[2025-06-26 18:26:11,972] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:26:11] "GET /tree?path=newfolder/new HTTP/1.1" 200 -
+[2025-06-26 18:26:12,983] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:26:12] "GET /tree?path=newfolder HTTP/1.1" 200 -
+[2025-06-26 18:26:13,455] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:26:13] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:26:14,544] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:26:14] "GET /tree?path=newfolder HTTP/1.1" 200 -
+[2025-06-26 18:26:15,193] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:26:15] "GET /tree?path=newfolder/new HTTP/1.1" 200 -
+[2025-06-26 18:26:16,998] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:26:16] "GET /tree?path=newfolder HTTP/1.1" 200 -
+[2025-06-26 18:26:17,368] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:26:17] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:27:06,250] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:27:06] "GET /app HTTP/1.1" 200 -
+[2025-06-26 18:27:06,280] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:27:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-26 18:27:06,280] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:27:06] "GET /static/script.js HTTP/1.1" 200 -
+[2025-06-26 18:27:06,293] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:27:06] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:27:11,204] INFO in app: Folder creation attempt from IP: 127.0.0.1 as admin
+[2025-06-26 18:27:11,205] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:27:11] "[31m[1mGET /makefolder?path=&folder_name=new HTTP/1.1[0m" 400 -
+[2025-06-26 18:27:14,668] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:27:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-26 18:27:14,688] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:27:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-06-26 18:27:30,614] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:27:30] "GET /tree?path=newfolder HTTP/1.1" 200 -
+[2025-06-26 18:27:35,712] INFO in app: Folder creation attempt from IP: 127.0.0.1 as admin
+[2025-06-26 18:27:35,712] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:27:35] "[31m[1mGET /makefolder?path=newfolder&folder_name=somethin HTTP/1.1[0m" 400 -
+[2025-06-26 18:27:38,704] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:27:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[2025-06-26 18:29:14,378] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:29:14] "GET /app HTTP/1.1" 200 -
+[2025-06-26 18:29:14,401] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:29:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-26 18:29:14,401] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:29:14] "GET /static/script.js HTTP/1.1" 200 -
+[2025-06-26 18:29:14,413] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:29:14] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:29:20,963] INFO in app: Folder creation attempt from IP: 127.0.0.1 as admin
+[2025-06-26 18:29:20,964] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:29:20] "GET /makefolder?path=&name=smth HTTP/1.1" 200 -
+[2025-06-26 18:29:21,897] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:29:21] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:29:34,242] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:29:34] "GET /tree?path=smth HTTP/1.1" 200 -
+[2025-06-26 18:29:38,046] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:29:38] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:29:41,919] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:29:41] "GET /tree?path=newfolder HTTP/1.1" 200 -
+[2025-06-26 18:29:45,433] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:29:45] "GET /tree?path=newfolder/new HTTP/1.1" 200 -
+[2025-06-26 18:29:53,217] INFO in app: Rename attempt from IP: 127.0.0.1 as admin
+[2025-06-26 18:29:53,218] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:29:53] "GET /rename?path=newfolder/new&new_name=empty HTTP/1.1" 200 -
+[2025-06-26 18:29:53,472] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:29:53] "GET /tree?path=newfolder/empty HTTP/1.1" 200 -
+[2025-06-26 18:29:55,532] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:29:55] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:31:02,416] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:31:02] "[36mGET /file?path=imager_1.9.4.exe HTTP/1.1[0m" 304 -
+[2025-06-26 18:31:06,930] INFO in app: File download attempt from IP: 127.0.0.1 as admin
+[2025-06-26 18:31:06,930] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:31:06] "[31m[1mGET /download?path= HTTP/1.1[0m" 400 -
+[2025-06-26 18:31:57,496] INFO in _internal:  * Detected change in 'c:\\Users\\Rylan\\Documents\\GitHub\\File_server\\app.py', reloading
+[2025-06-26 18:31:57,550] INFO in _internal:  * Restarting with stat
+[2025-06-26 18:33:59,279] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.40.111:8080
+[2025-06-26 18:33:59,279] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2025-06-26 18:33:59,281] INFO in _internal:  * Restarting with stat
+[2025-06-26 18:33:59,706] WARNING in _internal:  * Debugger is active!
+[2025-06-26 18:33:59,714] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-06-26 18:35:35,957] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:35:35] "[32mGET /mobile HTTP/1.1[0m" 302 -
+[2025-06-26 18:35:35,973] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:35:35] "GET / HTTP/1.1" 200 -
+[2025-06-26 18:35:36,059] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:35:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-06-26 18:35:41,846] INFO in app: Login attempt from IP: 192.168.40.97 as admin
+[2025-06-26 18:35:41,846] INFO in app: User logged in: admin from IP: 192.168.40.97
+[2025-06-26 18:35:41,847] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:35:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+[2025-06-26 18:35:41,863] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:35:41] "GET /app HTTP/1.1" 200 -
+[2025-06-26 18:35:42,020] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:35:42] "GET /static/style.css HTTP/1.1" 200 -
+[2025-06-26 18:35:42,021] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:35:42] "GET /static/script.js HTTP/1.1" 200 -
+[2025-06-26 18:35:42,047] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:35:42] "GET /mobile HTTP/1.1" 200 -
+[2025-06-26 18:35:42,093] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:35:42] "GET /static/mobile-style.css HTTP/1.1" 200 -
+[2025-06-26 18:35:42,093] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:35:42] "GET /static/mobile-script.js HTTP/1.1" 200 -
+[2025-06-26 18:35:42,130] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:35:42] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:35:56,409] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:35:56] "GET /tree?path=smth HTTP/1.1" 200 -
+[2025-06-26 18:35:58,048] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:35:58] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:35:59,205] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:35:59] "GET /tree?path=smth HTTP/1.1" 200 -
+[2025-06-26 18:36:12,423] INFO in app: File upload attempt from IP: 192.168.40.97 as admin
+[2025-06-26 18:36:13,069] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:36:13] "POST /upload?path=smth HTTP/1.1" 200 -
+[2025-06-26 18:36:14,234] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:36:14] "GET /tree?path=smth HTTP/1.1" 200 -
+[2025-06-26 18:36:17,278] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:36:17] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:36:41,825] INFO in app: Folder creation attempt from IP: 192.168.40.97 as admin
+[2025-06-26 18:36:41,826] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:36:41] "GET /makefolder?path=&name=smth2 HTTP/1.1" 200 -
+[2025-06-26 18:36:42,789] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:36:42] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:36:45,591] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:36:45] "GET /tree?path=smth2 HTTP/1.1" 200 -
+[2025-06-26 18:37:13,558] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:37:13] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:53:30,030] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:53:30] "GET /mobile HTTP/1.1" 200 -
+[2025-06-26 18:53:30,096] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:53:30] "[36mGET /static/mobile-style.css HTTP/1.1[0m" 304 -
+[2025-06-26 18:53:30,128] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:53:30] "[36mGET /static/mobile-script.js HTTP/1.1[0m" 304 -
+[2025-06-26 18:53:30,186] INFO in _internal: 192.168.40.97 - - [26/Jun/2025 18:53:30] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 18:54:33,569] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 18:54:33] "[36mGET /file?path=WORLD.png HTTP/1.1[0m" 304 -
+[2025-06-26 19:05:31,603] INFO in _internal:  * Detected change in 'c:\\Users\\Rylan\\Documents\\GitHub\\File_server\\app.py', reloading
+[2025-06-26 19:05:31,648] INFO in _internal:  * Restarting with stat
+[2025-06-26 19:05:34,443] WARNING in _internal:  * Debugger is active!
+[2025-06-26 19:05:34,450] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-06-26 19:06:11,664] INFO in _internal:  * Detected change in 'c:\\Users\\Rylan\\Documents\\GitHub\\File_server\\app.py', reloading
+[2025-06-26 19:06:11,709] INFO in _internal:  * Restarting with stat
+[2025-06-26 19:06:12,134] WARNING in _internal:  * Debugger is active!
+[2025-06-26 19:06:12,140] INFO in _internal:  * Debugger PIN: 129-036-334

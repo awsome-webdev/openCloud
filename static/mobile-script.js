@@ -136,7 +136,25 @@ uploadBtn.addEventListener("click", function(e) {
 fileInput.addEventListener("change", async function() {
     if (!fileInput.files.length) return;
     const formData = new FormData();
-    formData.append("file", fileInput.files[0]);
+    const key = prompt("Enter encryption key (leave blank for no encryption):");
+    if (key) {
+        for (const file of fileInput.files) {
+            const arrayBuffer = await file.arrayBuffer();
+            const plaintextBytes = new Uint8Array(arrayBuffer);
+            const encryptedBytes = encryptBinary(plaintextBytes, key);
+            const blob = new Blob([encryptedBytes], { type: file.type });
+            formData.append("file", blob, file.name + ".enc");
+        }
+    }
+    else {
+        for (const file of fileInput.files) {
+            const arrayBuffer = await file.arrayBuffer();
+            const plaintextBytes = new Uint8Array(arrayBuffer);
+            const blob = new Blob([plaintextBytes], { type: file.type });
+            formData.append("file", blob, file.name);
+        }
+    }
+
     const res = await fetch(`/upload?path=${encodeURIComponent(currentPath)}`, {
         method: "POST",
         body: formData
@@ -147,7 +165,6 @@ fileInput.addEventListener("change", async function() {
     } else {
         alert("Upload failed.");
     }
-    // Reset file input so the same file can be uploaded again if needed
     fileInput.value = "";
 });
 function deleteFile(){
@@ -169,14 +186,49 @@ function deleteFile(){
     }
 }
 // Download file
-function downloadFile(path) {
+async function downloadFile() {
     const path2 = document.getElementById('preview').getAttribute('path');
     if (!path2 || path2 === "" || path2 === "undefined") {
         alert("No file selected for download.");
         return;
-    }   
-    else {
-        window.location.href = `/download?path=${path2}`;
+    }
+
+    // Check if the file is encrypted (e.g., ends with .enc)
+    if (path2.endsWith('.enc')) {
+        const key = prompt("Enter decryption key:");
+        if (!key) return;
+
+        // Fetch the encrypted file as ArrayBuffer
+        const response = await fetch(`/download?path=${encodeURIComponent(path2)}`);
+        if (!response.ok) {
+            alert("Failed to download the file.");
+            return;
+        }
+        const encryptedBuffer = await response.arrayBuffer();
+        const encryptedBytes = new Uint8Array(encryptedBuffer);
+
+        // Decrypt
+        const decryptedBytes = decryptBinary(encryptedBytes, key);
+        if (!decryptedBytes) return; // decryption failed
+
+        // Guess original filename (remove .enc)
+        const originalName = path2.replace(/\.enc$/, "");
+
+        // Create a Blob and trigger download
+        const blob = new Blob([decryptedBytes]);
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = originalName;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(() => {
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }, 100);
+    } else {
+        // Not encrypted, just download normally
+        window.location.href = `/download?path=${encodeURIComponent(path2)}`;
     }
 }
 function downloadPath() {
@@ -260,4 +312,60 @@ function renameFile(){
             });
         }
     }
+}
+function createFolder(){
+    const newFolderName = prompt("Enter the name for the new folder:");
+    if (newFolderName) {
+        fetch(`/makefolder?path=${encodeURIComponent(currentPath)}&name=${encodeURIComponent(newFolderName)}`, {
+            method: 'GET'
+        }).then(response => {
+            if (response.ok) {
+                alert("Folder created successfully!");
+                displayFiles();
+            } else {
+                alert("Failed to create the folder.");
+            }
+        });
+    }
+}
+function decryptBinary(encryptedBytes, keyString) {
+    while (keyString.length < 32) {
+      keyString += "1";
+    }
+    const key = aesjs.utils.utf8.toBytes(keyString.slice(0, 32));
+  
+    const aesCtr = new aesjs.ModeOfOperation.ctr(key, new aesjs.Counter(5));
+    const decryptedBytes = aesCtr.decrypt(encryptedBytes);
+  
+    // Verify the marker
+    const marker = "VALID|";
+    const markerBytes = aesjs.utils.utf8.toBytes(marker);
+    for (let i = 0; i < markerBytes.length; i++) {
+      if (decryptedBytes[i] !== markerBytes[i]) {
+        alert("Decryption failed: Incorrect key.");
+        return null;
+      }
+    }
+    // Remove the marker and return the original file bytes
+    return decryptedBytes.slice(markerBytes.length);
+}
+function encryptBinary(plaintextBytes, keyString) {
+    // Ensure the key is at least 32 characters long (256 bits)
+    while (keyString.length < 32) {
+      keyString += "1"; // Append "1" until the key is long enough
+    }
+    const key = aesjs.utils.utf8.toBytes(keyString.slice(0, 32));
+  
+    // Prepend a marker to the plaintext so that you can check decryption later
+    const marker = "VALID|";
+    const markerBytes = aesjs.utils.utf8.toBytes(marker);
+    const combined = new Uint8Array(markerBytes.length + plaintextBytes.length);
+    combined.set(markerBytes, 0);
+    combined.set(plaintextBytes, markerBytes.length);
+  
+    // Encrypt using AES-CTR mode (using a fixed counter for simplicity;
+    const aesCtr = new aesjs.ModeOfOperation.ctr(key, new aesjs.Counter(5));
+    const encryptedBytes = aesCtr.encrypt(combined);
+
+    return encryptedBytes;
 }

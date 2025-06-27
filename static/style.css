@@ -22,11 +22,12 @@ h1 {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    max-width: 41.5vw;
 }
 #toolbar2 {
     position: absolute;
-    right: 3vw;
+    z-index: 1000;
+    left: 40vw;
+    bottom: 0vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +37,6 @@ h1 {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    max-width: 41.5vw;
 
 }
 #upload-form {
@@ -211,4 +211,18 @@ button:hover {
     border-radius: 10px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     overflow-y: auto;
+}
+#folder-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#file-options {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }

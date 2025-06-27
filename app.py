@@ -153,15 +153,38 @@ def upload():
         return 'Invalid path', 400
     if not os.path.exists(upload_dir):
         os.makedirs(upload_dir)
-    if 'file' not in request.files:
+    if 'file' not in request.files and 'files[]' not in request.files:
         return 'No file part', 400
-    file = request.files['file']
-    if file.filename == '':
+    files = request.files.getlist('file')
+    if not files or files == [None]:
+        files = request.files.getlist('files[]')
+    if not files or files == [None]:
         return 'No selected file', 400
-    filename = secure_filename(file.filename)
-    file.save(os.path.join(upload_dir, filename))
-    return 'File uploaded', 200
-
+    for file in files:
+        if file.filename == '':
+            continue
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(upload_dir, filename))
+    return 'File(s) uploaded', 200
+@app.route('/move')
+@login_required
+def move():
+    #client_ip = request.headers.get('X-Forwarded-For', request.remote_addr)
+    #logging.info(f"File move attempt from IP: {client_ip} as {session['user']}")
+    rel_path = request.args.get('path', '').strip('/')
+    new_path = request.args.get('new_path', '').strip('/')
+    abs_path = os.path.join(app.config['UPLOAD_FOLDER'], rel_path)
+    new_abs_path = os.path.join(app.config['UPLOAD_FOLDER'], new_path)
+    if not os.path.commonpath([os.path.abspath(abs_path), app.config['UPLOAD_FOLDER']]) == app.config['UPLOAD_FOLDER']:
+        return 'Invalid path', 400
+    if not os.path.commonpath([os.path.abspath(new_abs_path), app.config['UPLOAD_FOLDER']]) == app.config['UPLOAD_FOLDER']:
+        return 'Invalid new path', 400
+    if not os.path.exists(abs_path):
+        return 'File or directory not found', 404
+    if os.path.exists(new_abs_path):
+        return 'New path already exists', 400
+    os.rename(abs_path, new_abs_path)
+    return 'Moved successfully', 200
 @app.route('/download')
 @login_required
 def download():
