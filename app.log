@@ -141,3 +141,16 @@
 [2025-06-26 19:06:11,709] INFO in _internal:  * Restarting with stat
 [2025-06-26 19:06:12,134] WARNING in _internal:  * Debugger is active!
 [2025-06-26 19:06:12,140] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-06-26 19:18:15,706] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 19:18:15] "GET /app HTTP/1.1" 200 -
+[2025-06-26 19:18:15,841] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 19:18:15] "GET /static/script.js HTTP/1.1" 200 -
+[2025-06-26 19:18:15,845] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 19:18:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-06-26 19:18:16,052] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 19:18:16] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 19:18:29,885] INFO in app: File upload attempt from IP: 127.0.0.1 as admin
+[2025-06-26 19:18:29,888] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 19:18:29] "POST /upload?path= HTTP/1.1" 200 -
+[2025-06-26 19:18:30,687] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 19:18:30] "GET /tree HTTP/1.1" 200 -
+[2025-06-26 19:18:43,838] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 19:18:43] "GET /file?path=devlog.jpg.enc HTTP/1.1" 200 -
+[2025-06-26 19:18:47,921] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 19:18:47] "GET /file?path=devlog.jpg.enc HTTP/1.1" 200 -
+[2025-06-26 19:20:02,191] INFO in app: File download attempt from IP: 127.0.0.1 as admin
+[2025-06-26 19:20:02,192] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 19:20:02] "GET /download?path=devlog.jpg.enc HTTP/1.1" 200 -
+[2025-06-26 19:20:18,883] INFO in app: File download attempt from IP: 127.0.0.1 as admin
+[2025-06-26 19:20:18,883] INFO in _internal: 127.0.0.1 - - [26/Jun/2025 19:20:18] "[31m[1mGET /download?path= HTTP/1.1[0m" 400 -
