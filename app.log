@@ -903,3 +903,76 @@
 [2025-06-29 16:34:44,494] INFO in _internal:  * Restarting with stat
 [2025-06-29 16:34:44,890] WARNING in _internal:  * Debugger is active!
 [2025-06-29 16:34:44,897] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-07-01 19:11:44,708] INFO in _internal:  * Restarting with stat
+[2025-07-01 19:11:45,160] WARNING in _internal:  * Debugger is active!
+[2025-07-01 19:11:45,169] INFO in _internal:  * Debugger PIN: 129-036-334
+[2025-07-01 19:11:45,957] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2025-07-01 19:11:45,957] INFO in _internal:  * Running on http://192.168.40.111:8080/ (Press CTRL+C to quit)
+[2025-07-01 19:11:46,163] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:11:46] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UQPq HTTP/1.1[0m" 404 -
+[2025-07-01 19:11:51,837] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:11:51] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8US2Q HTTP/1.1[0m" 404 -
+[2025-07-01 19:11:51,841] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:11:51] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8US2V HTTP/1.1[0m" 404 -
+[2025-07-01 19:11:51,845] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:11:51] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8US2Z HTTP/1.1[0m" 404 -
+[2025-07-01 19:11:57,833] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:11:57] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UTW6 HTTP/1.1[0m" 404 -
+[2025-07-01 19:11:57,839] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:11:57] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UTWC HTTP/1.1[0m" 404 -
+[2025-07-01 19:11:57,843] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:11:57] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UTWH HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:03,827] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:03] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UUzm HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:03,833] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:03] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UUzs HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:09,822] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:09] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UWRS HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:09,828] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:09] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UWRY HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:09,832] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:09] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UWRc HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:15,837] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:15] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UXvQ HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:21,067] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:21] "[32mGET /mobile HTTP/1.1[0m" 302 -
+[2025-07-01 19:12:21,100] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:21] "GET / HTTP/1.1" 200 -
+[2025-07-01 19:12:21,190] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:21,825] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:21] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UZMz HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:27,835] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:27] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Uaqu HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:27,840] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:27] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Uaq- HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:27,845] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:27] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Uar3 HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:33,832] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:33] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UcIc HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:33,838] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:33] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UcIh HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:33,842] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:33] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UcIm HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:33,846] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:33] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UcIq HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:39,832] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:39] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UdmL HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:39,836] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:39] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UdmQ HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:39,841] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:39] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UdmV HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:39,846] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:39] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UdmZ HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:39,851] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:39] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Udmf HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:39,856] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:39] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Udmk HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:41,041] INFO in app: Login attempt from IP: 192.168.40.97 as admin
+[2025-07-01 19:12:41,041] INFO in app: User logged in: admin from IP: 192.168.40.97
+[2025-07-01 19:12:41,043] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+[2025-07-01 19:12:41,118] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:41] "GET /app HTTP/1.1" 200 -
+[2025-07-01 19:12:41,306] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:41] "[36mGET /static/script.js HTTP/1.1[0m" 304 -
+[2025-07-01 19:12:41,306] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[2025-07-01 19:12:41,376] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:41] "GET /mobile HTTP/1.1" 200 -
+[2025-07-01 19:12:41,451] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:41] "[36mGET /static/mobile-style.css HTTP/1.1[0m" 304 -
+[2025-07-01 19:12:41,455] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:41] "[36mGET /static/mobile-script.js HTTP/1.1[0m" 304 -
+[2025-07-01 19:12:41,506] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:41] "GET /tree HTTP/1.1" 200 -
+[2025-07-01 19:12:45,836] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:45] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UfE9 HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:46,165] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:46] "GET /mobile HTTP/1.1" 200 -
+[2025-07-01 19:12:46,189] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:46] "[36mGET /static/mobile-style.css HTTP/1.1[0m" 304 -
+[2025-07-01 19:12:46,196] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:46] "[36mGET /static/mobile-script.js HTTP/1.1[0m" 304 -
+[2025-07-01 19:12:46,214] INFO in _internal: 192.168.40.97 - - [01/Jul/2025 19:12:46] "GET /tree HTTP/1.1" 200 -
+[2025-07-01 19:12:51,831] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:51] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Ughq HTTP/1.1[0m" 404 -
+[2025-07-01 19:12:57,832] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:12:57] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Ui9b HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:03,823] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:03] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UjdC HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:09,830] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:09] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Ul53 HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:09,835] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:09] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Ul58 HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:09,841] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:09] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Ul5E HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:09,846] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:09] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Ul5J HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:09,850] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:09] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Ul5O HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:09,854] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:09] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Ul5S HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:15,823] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:15] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UmYi HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:15,827] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:15] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UmYn HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:15,831] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:15] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UmYr HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:15,835] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:15] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UmYv HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:15,839] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:15] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UmYz HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:15,843] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:15] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UmZ1 HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:21,825] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:21] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Uo0U HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:27,827] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:27] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UpUG HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:33,826] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:33] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8Uqx_ HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:39,831] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:39] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UsPq HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:45,824] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:45] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UttT HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:45,828] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:45] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UttZ HTTP/1.1[0m" 404 -
+[2025-07-01 19:13:51,835] INFO in _internal: 127.0.0.1 - - [01/Jul/2025 19:13:51] "[33mGET /socket.io/?EIO=4&transport=polling&t=PV8UvLO HTTP/1.1[0m" 404 -
