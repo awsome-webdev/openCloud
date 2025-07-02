@@ -5,6 +5,7 @@ import io
 import zipfile
 from functools import wraps
 import logging
+from werkzeug.middleware.proxy_fix import ProxyFix
 logging.basicConfig(
     level=logging.INFO,
     format='[%(asctime)s] %(levelname)s in %(module)s: %(message)s',

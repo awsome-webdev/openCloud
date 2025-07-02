@@ -3,6 +3,21 @@ let pathStack = [];
 setInterval(() => {
     updatepath();
 }, 100);
+Hold('upload-btn', function(){
+    alert('Upload files to the current folder. You can also encrypt files by providing a key.');
+})
+Hold('download', function(){
+    alert('Download the current file. If it is encrypted, you will be prompted for a decryption key.');
+})
+Hold('logout-btn', function(){
+    alert('Logout from the server. This will clear your session.');
+})
+Hold('folder-rename-btn', function(){
+    alert('Rename the current folder. You will be prompted for a new name.');
+})
+Hold('create-folder', function(){
+    alert('Create a new folder in the current directory. You will be prompted for the folder name.');
+})
 async function getfiles(path = "") {
     const response = await fetch("/tree" + (path ? `?path=${encodeURIComponent(path)}` : ""));
     return await response.json();
@@ -368,4 +383,57 @@ function encryptBinary(plaintextBytes, keyString) {
     const encryptedBytes = aesCtr.encrypt(combined);
 
     return encryptedBytes;
+}
+function Hold(elementId, callback) {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    let timer = null;
+
+    el.addEventListener('touchstart', function(e) {
+        timer = setTimeout(() => {
+            if (typeof callback === "string") {
+                // If callback is a string, use eval (not recommended for untrusted code)
+                eval(callback);
+            } else if (typeof callback === "function") {
+                callback(e);
+            }
+        }, 500); // 500ms hold
+    });
+
+    el.addEventListener('touchend', function() {
+        clearTimeout(timer);
+    });
+    el.addEventListener('touchmove', function() {
+        clearTimeout(timer);
+    });
+}
+
+// Example usage with a function:
+addTouchHoldListener('your-element-id', function() {
+    alert('Long press detected!');
+});
+
+// Example usage with a string:
+addTouchHoldListener('your-element-id', "alert('Long press detected!')");
+function toggleToolBar(){
+    const ele = document.getElementById("toolbar")
+    if (ele.style.display === "none"){
+        ele.style.display = "block"
+    }
+    else{
+        ele.style.display = "none"
+    }
+}
+function openFiles(){
+    const ele = document.getElementById('files')
+    const terminal = document.getElementById('terminal')
+    terminal.style.display = 'none'
+    ele.style.display = 'block'
+
+}
+function openTerminal(){
+    const ele = document.getElementById('terminal')
+    const files = document.getElementById('files')
+    ele.style.display = 'block'
+    files.style.display = 'none'
 }

@@ -12,7 +12,7 @@ function createExplorerElement(tree, path = "") {
     const container = document.createElement("ul");
     document.getElementById('folder-list').innerHTML = "";
     for (const key in tree) {
-        const value = tree[key];
+        const value = tree[key]
         const fullPath = path ? `${path}/${key}` : key;
         const li = document.createElement("li");
         if (value === null) {
@@ -166,8 +166,7 @@ fileInput.addEventListener("change", async function() {
     }
     fileInput.value = "";
 });
-function deleteFile(){
-    const path = document.getElementById('preview').getAttribute('path');
+function deleteFile(){Hath = document.getElementById('preview').getAttribute('path');
     if (!path || path === "" || path === "undefined") {
         alert("No file selected for deletion.");
         return;
