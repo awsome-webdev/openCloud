@@ -66,7 +66,6 @@ async function open_file(path) {
     } else if (contentType.startsWith("text/") || contentType === "application/json") {
         const text = await file.text();
         pre.innerHTML = `<div contenteditable="true" class="text-editor" style="white-space:pre-wrap;word-break:break-all;">${text}</div>`;
-        document.getElementById('save-btn').style.display = 'block';
     } else if (contentType === "application/pdf") {
     const blob = await file.blob();
     const url = URL.createObjectURL(blob);
@@ -166,13 +165,13 @@ fileInput.addEventListener("change", async function() {
     }
     fileInput.value = "";
 });
-function deleteFile(){Hath = document.getElementById('preview').getAttribute('path');
+function deleteFile(){path = document.getElementById('preview').getAttribute('path');
     if (!path || path === "" || path === "undefined") {
         alert("No file selected for deletion.");
         return;
     }   
     else {
-        fetch(`/delete?path=${path}`)
+        fetch(`/delete?path=/${path}`)
             .then(response => {
                 if (response.ok) {
                     alert("File deleted successfully!");
