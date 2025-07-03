@@ -371,3 +371,15 @@ function encryptBinary(plaintextBytes, keyString) {
 
     return encryptedBytes;
 }
+function openTerminal(){
+    const files = document.getElementById('files')
+    files.style.display = 'none'
+    const terminal = document.getElementById('terminal')
+    terminal.style.display = "block"
+}
+function closeTerminal(){
+    const files = document.getElementById('files')
+    const terminal = document.getElementById('terminal')
+    terminal.style.display = "none"
+    files.style.display = "block"
+}

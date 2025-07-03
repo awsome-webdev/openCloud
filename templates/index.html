@@ -15,6 +15,7 @@
 </script>
     </head>
     <body>
+        <div id="files">
     <div id="toolbar">
             <div id="folder-options">
                 <form id="upload-form" enctype="multipart/form-data">
@@ -27,6 +28,7 @@
                 <button onclick="location.href='/logout'" id="logout-btn">Logout</button>
                 <button onclick="renameFolder()">Rename Folder</button>
                 <button onclick="createFolder()">Create Folder</button>
+                <button onclick="openTerminal()">Open Terminal</button>
             </div>
             <div id="file-options">
                 <button onclick="downloadFile()" id="download-btn">Download File</button>
@@ -56,6 +58,11 @@
             </div>
         </div>
         <div id="download-link" style="display:none;"></div>
+        </div>
+        <div id="terminal">
+            <iframe src="/terminal" frameborder="0"></iframe>
+            <button id="closeTerminal-btn" onclick="closeTerminal()">Close Terminal</button>
+        </div>
     </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/aes-js@3.1.2/index.min.js"></script>
