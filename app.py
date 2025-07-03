@@ -16,6 +16,7 @@ import shlex
 import logging
 import sys
 import platform
+domain = "domain.com"
 logging.basicConfig(
     level=logging.INFO,
     format='[%(asctime)s] %(levelname)s in %(module)s: %(message)s',
@@ -258,6 +259,7 @@ else:
     app.config["child_pid"] = None
     app.config["fd"] = None
     app.config["cmd"] = ["/bin/bash"]
+    socketio = SocketIO(app, cors_allowed_origins=[f"https://{domain}"])
     def set_winsize(fd, row, col, xpix=0, ypix=0):
         logging.debug("setting window size with termios")
         winsize = struct.pack("HHHH", row, col, xpix, ypix)
