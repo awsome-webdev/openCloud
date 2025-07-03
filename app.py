@@ -16,7 +16,10 @@ import shlex
 import logging
 import sys
 import platform
+global domain
 domain = "domain.com"
+if domain == "domain.com":
+    print("You NEED to set your domain variable to your domain for cors")
 logging.basicConfig(
     level=logging.INFO,
     format='[%(asctime)s] %(levelname)s in %(module)s: %(message)s',
