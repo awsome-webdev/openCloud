@@ -158,7 +158,13 @@ fileInput.addEventListener("change", async function() {
             const plaintextBytes = new Uint8Array(arrayBuffer);
             const encryptedBytes = encryptBinary(plaintextBytes, key);
             const blob = new Blob([encryptedBytes], { type: file.type });
-            formData.append("file", blob, file.name + ".enc");
+            const uploadFile = new File([blob], file.name + ".enc", { type: file.type });
+                uploadFileWithXHR(uploadFile, 
+                `/upload?path=${encodeURIComponent(currentPath)}`,
+                percent => { console.log(percent)},
+                response => {alert('done')},
+                error => {if(error){alert(`error uploading ${error}`)}}
+                )
         }
     }
     else {
@@ -166,19 +172,14 @@ fileInput.addEventListener("change", async function() {
             const arrayBuffer = await file.arrayBuffer();
             const plaintextBytes = new Uint8Array(arrayBuffer);
             const blob = new Blob([plaintextBytes], { type: file.type });
-            formData.append("file", blob, file.name);
+            const uploadFile = new File([blob], file.name, { type: file.type });
+                uploadFileWithXHR(uploadFile, 
+                `/upload?path=${encodeURIComponent(currentPath)}`,
+                percent => { console.log(percent)},
+                response => {alert('done')},
+                error => {if(error){alert(`error uploading ${error}`)}}
+                )
         }
-    }
-
-    const res = await fetch(`/upload?path=${encodeURIComponent(currentPath)}`, {
-        method: "POST",
-        body: formData
-    });
-    if (res.ok) {
-        alert("Upload successful!");
-        displayFiles();
-    } else {
-        alert("Upload failed.");
     }
     fileInput.value = "";
 });
@@ -186,6 +187,7 @@ function deleteFile(){
     const path = document.getElementById('preview').getAttribute('path');
     if (!path || path === "" || path === "undefined") {
         alert("No file selected for deletion.");
+        
         return;
     }   
     else {
@@ -436,4 +438,43 @@ function openTerminal(){
     const files = document.getElementById('files')
     ele.style.display = 'block'
     files.style.display = 'none'
+}
+function uploadFileWithXHR(file, uploadUrl, onProgress, onComplete, onError) {
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", uploadUrl, true);
+
+    xhr.upload.onprogress = function(event) {
+        if (event.lengthComputable && onProgress) {
+            const percent = (event.loaded / event.total) * 100;
+            onProgress(percent);
+        }
+    };
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            if (onComplete) onComplete(xhr.responseText);
+        } else {
+            if (onError) onError(xhr.statusText);
+        }
+    };
+
+    xhr.onerror = function() {
+        if (onError) onError(xhr.statusText);
+    };
+
+    const formData = new FormData();
+    formData.append("file", file, file.name);
+    xhr.send(formData);
+}
+function updateProgress(percent, count){
+    if (count){
+        const ele = document.getElementById(`progress-${count}`)
+        ele.setAttribute('value', percent)
+    } else{
+        const ele = document.createElement('progress')
+        ele.setAttribute('max', 100)
+        ele.setAttribute('value', percent)
+        ele.setAttribute('id', `progress-${count}`)
+        document.getElementById('progress-parent').appendChild(ele)
+    }
 }

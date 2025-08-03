@@ -40,6 +40,7 @@ with open('secret_key.txt', 'r') as key_file:
 app.secret_key = secret_key  # Set a strong secret key!
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'root')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024
 socketio = SocketIO(app)
 
 # Helper to scan a directory and return its immediate contents

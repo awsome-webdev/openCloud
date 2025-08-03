@@ -1,0 +1,20 @@
+[2025-07-06 17:19:03,794] INFO in app: serving on http://127.0.0.1:8080
+[2025-07-06 17:19:03,795] INFO in _internal:  * Restarting with stat
+[2025-07-06 17:19:05,535] INFO in app: serving on http://127.0.0.1:8080
+[2025-07-06 17:19:05,535] WARNING in _internal:  * Debugger is active!
+[2025-07-06 17:19:05,543] INFO in _internal:  * Debugger PIN: 698-015-004
+[2025-07-06 17:19:36,097] INFO in app: Login attempt from IP: 127.0.0.1 as admin
+[2025-07-06 17:19:36,097] INFO in app: User logged in: admin from IP: 127.0.0.1
+[2025-07-06 17:20:02,874] INFO in app: File upload attempt from IP: 127.0.0.1 as admin
+[2025-07-06 17:21:18,998] INFO in app: File upload attempt from IP: 127.0.0.1 as admin
+[2025-07-06 17:22:10,133] INFO in app: File delete attempt from IP: 127.0.0.1 as admin
+[2025-07-06 17:22:59,372] INFO in app: File upload attempt from IP: 127.0.0.1 as admin
+[2025-07-06 17:23:08,853] INFO in app: File delete attempt from IP: 127.0.0.1 as admin
+[2025-07-06 17:23:47,611] INFO in app: Login attempt from IP: 192.168.40.97 as admin
+[2025-07-06 17:23:47,611] INFO in app: User logged in: admin from IP: 192.168.40.97
+[2025-07-06 17:24:01,590] INFO in app: File upload attempt from IP: 192.168.40.97 as admin
+[2025-07-06 17:29:31,399] INFO in _internal:  * Detected change in 'c:\\Users\\Rylan\\Documents\\GitHub\\File_server\\app.py', reloading
+[2025-07-06 17:29:31,495] INFO in _internal:  * Restarting with stat
+[2025-07-06 17:29:32,905] INFO in app: serving on http://127.0.0.1:8080
+[2025-07-06 17:29:32,906] WARNING in _internal:  * Debugger is active!
+[2025-07-06 17:29:32,912] INFO in _internal:  * Debugger PIN: 698-015-004
